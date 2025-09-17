@@ -1,0 +1,14 @@
+.div1 {
+    background: red;
+    width: 50%;
+}
+
+.div2 {
+    background: green;
+    width: 75%;
+}
+
+.div3 {
+    background: blue;
+    width: 75vw;
+}

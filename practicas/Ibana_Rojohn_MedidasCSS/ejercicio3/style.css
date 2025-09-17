@@ -1,0 +1,19 @@
+html {
+    font-size: 20px;
+}
+
+body {
+    font-size: 30px;
+}
+
+div {
+    height: 100vh;
+}
+
+.div1 {
+    background: red;
+}
+
+.div2 {
+    background: green;
+}
