@@ -1,0 +1,15 @@
+.padre {
+    width: 200px;
+    border: 10px solid black;
+    padding: 20px;
+}
+
+.hijo {
+    width: 50%;
+    border: 2px solid black;
+    padding: 5px;
+}
+
+* {
+    box-sizing: border-box;
+}

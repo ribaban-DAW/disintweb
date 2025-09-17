@@ -1,0 +1,30 @@
+div {
+  margin: 15px;
+  color: white;
+  padding: 1px 0;
+}
+
+.red {
+    border: 10px solid #ff6b6b;
+}
+
+.orange {
+    border: 10px solid #ff9e2c;
+}
+
+.yellow {
+    border: 10px solid #eeee78;
+}
+
+.green {
+    border: 10px solid #4ecd9d;
+}
+
+.blue {
+    border: 10px solid #4e97cd;
+}
+
+.purple {
+    border: 10px solid #6c4ecd;
+    background: purple;
+}

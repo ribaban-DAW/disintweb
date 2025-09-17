@@ -1,0 +1,30 @@
+<!-- 
+Si tenemos un archivo html cuyo body contiene un div padre de la clase padre y un div hijo de la clase hijo y el fichero CSS enlazado con el ese html contiene lo siguiente: 
+
+.padre { width: 200px; border: 10px solid black; padding: 20px; }
+
+.hijo { width: 50%; border: 2px solid black; padding: 5px; }
+
+Responde a las siguientes preguntas:
+1. ¿Cuántos píxeles de ancho medirá el contenido (ojo, el contenido) del div de la clase hijo?
+2. Si añadimos la siguiente regla CSS:
+* {
+box-sizing: border-box;
+}
+¿Cuántos píxeles de ancho medirá el contenido (ojo, el contenido) del div de la clase hijo?"
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="padre">
+        <div class="hijo"></div>
+    </div>
+</body>
+</html>

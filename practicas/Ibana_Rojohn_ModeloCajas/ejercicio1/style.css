@@ -1,0 +1,13 @@
+div {
+    width: 200px;
+}
+
+.div1 {
+    background: red;
+    padding: 10px;
+}
+
+.div2 {
+    background: blue;
+    text-align: center;
+}
