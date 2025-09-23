@@ -1,0 +1,143 @@
+:root {
+	--accent-color: #7DA2A9;
+	--color-white: #F7F7F7;
+	--color-white-shade: #CCC;
+	--color-white-tint: #EEE;
+}
+
+/* - anchura del 90% del viewport y un mínimo de 300px */
+body, header {
+	width: 90vw;
+	min-width: 300px;
+}
+
+body {
+	/* - Color de fondo:#CCCCCC */
+	background: var(--color-white-shade);
+    /* - un borde (solido,#FFFFFF) */
+	border: solid white;
+    /* - font-family:Geneva,Arial,Helvetica,sans-serif; */
+	font-family: Geneva,Arial,Helvetica,sans-serif;
+	/* Para centrarlo como en la imagen */
+	margin: 0 auto;
+}
+
+.container {
+	background: var(--color-white);
+
+	h3, a {
+		color: var(--accent-color);
+	}
+}
+
+/* Tanto el header como el footer comparten propiedades, exceptuando el padding-top */
+header, footer {
+	/* - Color de fondo:#7DA2A9 */
+	background: var(--accent-color);
+	/* - añadir un relleno superior */
+	padding-top: 1em;
+	text-align: center;
+
+    /* - eliminar el estilo por defecto del h2, h1 y h3 (margin:0) */
+	h1, h2, h3 {
+		color: white;
+		margin: 0;
+	}
+
+    /* - h1 tendrá tamaño del 5% del ancho del viewport (font-size:5vw) */
+	h1 {
+		font-size: 5vw;
+	}
+
+    /* - h2 tendrá un relleno de 10px */
+	h2 {
+		padding: 10px;
+	}
+}
+
+h1, h2, h3 {
+	text-align: center;
+}
+
+nav {
+	/* El elemento nav tendrá una anchura del 25% respecto a su padre */
+	width: 25%;
+
+	h3 {
+		/* El título del elemento nav tendrá un margen de 15px */
+		margin: 15px;
+	}
+
+	a {
+		margin: 5px;
+		text-decoration: none;
+		font-weight: bold;
+		padding: 10px;
+		border-bottom: 3px solid white;
+	}
+}
+
+/* El elemento section tendrá un tamaño del 50% respecto a su padre */
+section {
+	width: 50%;
+}
+
+article {
+	background: var(--color-white-tint);
+	/* El elemento article tendrá un margen y un relleno de 10px */
+	margin: 10px;
+	padding: 10px;
+	/* El elemento article tendrá un borde redondeado de 10px */
+	border-radius: 10px;
+
+	/* El elemento header del article tendrá un relleno 5px y un borde redondeado de 10px. */
+	header, footer {
+		padding: 5px;
+		border-radius: 10px;
+		/* Para reiniciar la anchura y que no pille la asignada previamente (90vw) */
+		width: initial;
+	}
+	
+	/* Para reiniciar el tamaño de la fuente y que no pille la asignada previamente (90vw) */
+	h1, h2 {
+		font-size: initial;
+	}
+
+	/* Yo creo que debería tener este padding para que se parezca más a la imagen, aunque iría en contra de lo que pide el enunciado, un padding de 5px. En caso de que estuviera mal, simplemente habría que comentarlo */
+	footer {
+		padding: 20px;
+	}
+}
+
+aside {
+	/* El elemento aside tendrá un tamaño del 25% respecto a su padre. El h3 y el p (del aside) un margen de 15px */
+	width: 25%;
+
+	h3, p {
+		margin: 15px;
+	}
+
+	p {
+		font-weight: bold;
+		font-style: italic;
+	}
+}
+
+/* El elemento footer tendrá un relleno de 15px */
+footer {
+	padding: 15px;
+}
+
+/* Lo que había por defecto */
+
+aside, section, nav {
+	float:left;
+}
+
+footer{
+	clear:both;
+}
+
+nav a{
+	display: block;
+}
