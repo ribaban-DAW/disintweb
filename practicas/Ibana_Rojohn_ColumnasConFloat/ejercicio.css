@@ -1,0 +1,30 @@
+.row {
+    float: none;
+
+    .col-2 {
+        width: 50%;
+        float: left;
+
+        p {
+            max-width: 80%;
+        }
+    }
+
+    .col-3 {
+        width: 33%;
+        float: left;
+
+        p {
+            max-width: 80%;
+        }
+    }
+
+    .col-4 {
+        width: 25%;
+        float: left;
+
+        p {
+            max-width: 80%;
+        }
+    }
+}
