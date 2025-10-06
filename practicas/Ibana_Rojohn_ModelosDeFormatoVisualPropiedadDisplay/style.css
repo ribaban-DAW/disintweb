@@ -1,0 +1,38 @@
+body {
+    background: #3d3536;
+}
+
+div {
+    background: white;
+    margin: 0 auto;
+    margin-top: 40vh;
+    width: 40%;
+    padding: 1em;
+    border-radius: 20px;
+
+    p {
+        background: #808080;
+        display: inline-block;
+        padding: 2.8em;
+        border-radius: 20px;
+        margin: auto;
+    }
+
+    p:first-child {
+        color: #f7bfcb;
+        margin-left: 1.3em;
+    }
+
+    p:nth-child(2) {
+        color: #b1d9dc;
+    }
+
+    p:nth-child(3) {
+        color: #f8c2ce;
+    }
+    
+    p:last-child {
+        color: #92f38d;
+    }
+    
+}
