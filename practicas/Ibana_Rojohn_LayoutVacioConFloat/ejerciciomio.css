@@ -1,0 +1,41 @@
+header, nav, main, aside, footer {
+    float: left;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+nav, main, aside {
+    height: 70vh;
+}
+
+header {
+    width: 100%;
+    border: 1px solid black;
+    border-bottom: 2px solid orange;
+    height: 15vh
+}
+
+nav, aside {
+    border: 2px solid blue;
+    border-top: 1px solid blue;
+    border-bottom: 1px solid blue;
+}
+
+nav {
+    width: 15%;
+}
+
+main {
+    width: 70%;
+}
+
+aside {
+    width: 15%;
+}
+
+footer {
+    width: 100%;
+    border: 1px solid black;
+    border-top: 2px solid green;
+    height: 15vh;
+}
