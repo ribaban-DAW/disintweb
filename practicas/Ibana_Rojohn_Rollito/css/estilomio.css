@@ -35,6 +35,7 @@
   --img_tenedor_size: 8px;
   --img_tenedor_margin_left: 0.8em;
   --img_tenedor_margin_right: 0.4em;
+  --fotos_article_gap: 1em;
   --footer_vertcal_padding: 1em;
   /* FONTS */
   --header_font: 'Merriweather', serif;
@@ -149,6 +150,16 @@
   margin-left: var(--horizontal_margin);
 }
 
+#fotos.section {
+  margin-left: 1em;
+}
+
+#fotos > article.section__content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--fotos_article_gap);
+}
+
 #fotos > article.section__content > figure {
   display: flex;
   flex-direction: column;
@@ -161,8 +172,8 @@
   flex: 1;
 }
 
-#fotos.section {
-  margin-left: 1em;
+#fotos > article.section__content > figure > figcaption {
+  padding: var(--nav_item_vertical_padding);
 }
 
 .footer {
