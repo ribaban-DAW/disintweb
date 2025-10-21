@@ -1,0 +1,179 @@
+
+
+/* Nota: para poder utilizar la fuente debéis importarla en LA cabecera del HTML:
+<link href="https://fonts.googleapis.com/css?family=Merriweather|Open+Sans|Roboto" rel="stylesheet">
+*/
+
+
+:root {
+  /* COLORS */
+  --header_background_color: #484432;
+  --text_light_color: #FFFFFF;
+  --body_background_color: #FAFAF5;
+  --main_background_color: #FFFFFF;
+  --section_header_color: #8BAD00;
+  --nav_item_background: #FF7F00;
+  --nav_item_border: #A95400;
+  --nav_item_background_hover: #FF9900;
+  --footer_link: #FFB266;
+  --footer_link_hover: #FF860F;
+  /* DIMENS */
+  --horizontal_margin: 2rem;
+  --vertical_margin: 1rem;
+  --foto_min_width: 18rem;
+  --up_icon_width: 3.2rem;
+  --body_font_size: 2rem;
+  --header_title_word_spacing: 0.5em;
+  --section_title_margin_bottom: 0.5em;
+  --main_border_radius: 5px;
+  --section_horizontal_margin: 1em;
+  --nav_item_vertical_padding: 0.5em;
+  --nav_item_horizontal_padding: 1em;
+  --nav_ul_gap: 1em;
+  --section_content_text_indent: 1em;
+  --small_margin_bottom: 0.5em;
+  --img_tenedor_size: 8px;
+  --img_tenedor_margin_left: 0.8em;
+  --img_tenedor_margin_right: 0.4em;
+  --footer_vertcal_padding: 1em;
+  /* FONTS */
+  --header_font: 'Merriweather', serif;
+  --main_font: 'Roboto', sans-serif;
+  --title_font: 'Open Sans', sans-serif;
+
+  box-sizing: border-box;
+  font-size: 62.5%;
+  font-family: var(--main_font);
+}
+
+* {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+.main {
+  margin: var(--vertical_margin) var(--horizontal_margin);
+  border: 5px solid var(--header_background_color);
+  border-radius: var(--main_border_radius);
+}
+
+.header,
+.footer,
+.section__content > figure > figcaption {
+  background: var(--header_background_color);
+  color: var(--text_light_color);
+  text-align: center;
+}
+
+.header {
+  padding: 1em;
+}
+
+.header__title {
+  font-family: var(--header_font);
+  word-spacing: var(--header_title_word_spacing);
+}
+
+.nav {
+  margin: var(--vertical_margin);
+}
+
+.nav > ul {
+  display: flex;
+  gap: var(--nav_ul_gap);
+}
+
+.nav__item__link {
+  color: var(--text_light_color);
+  text-decoration: none;
+}
+
+.nav > ul > .nav__item {
+  background: var(--nav_item_background);
+  list-style: none;
+  padding: var(--nav_item_vertical_padding) var(--nav_item_horizontal_padding);
+  border: 1px solid var(--nav_item_border);
+}
+
+.nav > ul > .nav__item:hover {
+  background: var(--nav_item_background_hover);
+  border: 1px solid var(--nav_item_background_hover);
+}
+
+.section {
+  margin: 0 var(--horizontal_margin);
+}
+
+.section__title {
+  color: var(--section_header_color);
+  border-bottom: 1px solid var(--section_header_color);
+  margin-bottom: var(--small_margin_bottom);
+  font-family: var(--title_font);
+}
+
+.section__up {
+  display: flex;
+  width: 100%;
+  justify-content: end;
+}
+
+.section__up__icon {
+  width: var(--up_icon_width);
+}
+
+#descripcion > article.section__content > p {
+  text-indent: var(--section_content_text_indent);
+  margin-bottom: var(--small_margin_bottom);
+}
+
+#ingredientes > article.section__content > ul > li {
+  list-style-type: none;
+  margin-bottom: var(--small_margin_bottom);
+}
+
+#ingredientes > article.section__content > ul > li::before {
+  content: "";
+  display: inline-block;
+  width: var(--img_tenedor_size);
+  height: var(--img_tenedor_size);
+  background-image: url('../img/tenedor.png');
+  background-size: contain;
+  margin-right: var(--img_tenedor_margin_right);
+  margin-left: var(--img_tenedor_margin_left);
+  vertical-align: middle;
+}
+
+#receta > article.section__content > ol > li {
+  margin-bottom: var(--small_margin_bottom);
+  margin-left: var(--horizontal_margin);
+}
+
+#fotos > article.section__content > figure {
+  display: flex;
+  flex-direction: column;
+}
+
+#fotos > article.section__content > figure > img,
+#fotos > article.section__content > figure > figcaption {
+  display: block;
+  width: var(--foto_min_width);
+  flex: 1;
+}
+
+#fotos.section {
+  margin-left: 1em;
+}
+
+.footer {
+  padding: var(--footer_vertcal_padding) 0;
+}
+
+.footer__link {
+  text-decoration: none;
+  color: var(--footer_link);
+}
+
+.footer__link:hover {
+  color: var(--footer_link_hover);
+}
