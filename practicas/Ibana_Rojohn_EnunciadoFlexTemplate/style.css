@@ -1,0 +1,122 @@
+:root {
+    --white: #ffffff;
+    --white-shade: #ffffffcc;
+    --black: #1c1c1c;
+    --brown: #deb992;
+    --orange: #d48166;
+    --gray: #ffffff50;
+    --button-hover: #ffffff11;
+
+    --nav-vertical-padding: 1em;
+    --button-padding: 1em;
+    --fonts: Roboto, Arial, sans-serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: var(--fonts);
+}
+
+nav {
+    background: var(--black);
+    padding: var(--nav-vertical-padding);
+}
+
+nav > p {
+    color: var(--white);
+}
+
+nav > p > a {
+    color: var(--white);
+    text-decoration: none;
+}
+
+.hero {
+    background: var(--brown);
+    color: var(--white);
+    min-height: 60vh;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2em;
+
+    font-size: 1.5em;
+}
+
+.hero > button {
+    background: transparent;
+
+    color: var(--white);
+    border: 1px solid var(--white);
+    padding: var(--button-padding) calc(var(--button-padding) * 3);
+    font-weight: bold;
+}
+
+.hero > button:hover {
+    background: var(--button-hover);
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.content > article > div {
+    width: 50%;
+}
+
+.content > article > aside {
+    width: 50%;
+}
+
+
+
+.content > article {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.content > article > h2 {
+    font-size: 2em;
+    color: var(--orange);
+}
+
+.content > article > h2+p {
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    padding: 1em;
+}
+
+.content > article > h2+p > span {
+    color: var(--orange);
+}
+
+.content > aside > figure > img {
+    display: block;
+    width: 100%;
+}
+
+footer {
+    min-height: 30vh;
+    background: var(--black);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer > p {
+    color: var(--gray);
+}
+
+footer > p > a {
+    color: var(--white-shade);
+}
+
+footer > p > a:hover {
+    color: var(--white);
+}
