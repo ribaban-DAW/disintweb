@@ -8,52 +8,52 @@
 </head>
 <body>
     <header>
-        <nav>
-            <p>Ejercicio <a href="#"><strong>Clase</strong></a></p>
+        <nav class="navbar">
+            <p>Ejercicio <a href="#" class="text-white"><strong>Clase</strong></a></p>
         </nav>
     </header>
     <main>
-        <section class="hero">
+        <section id="hero" class="flex flex-center">
             <h1>¡Ánimo!Clase!</h1>
-            <button>Continue</button>
+            <a href="index_2.html">Continue</a href="index_2.html">
         </section>
-        <section class="content">
-            <article>
-                <h2>Ipsum lorem sed lorem</h2>
-                <p>3 days ago by <span>María G</span></p>
-                <p>Nullam posuere erat vel placerat rutrum. Praesent ac consectetur dui, et congue quam. Donec aliquam lacinia condimentum. Integer porta massa sapien, commodo sodales diam suspicit vitae. Aliquam quis felis sed urna semper semper. Phasellus eu scelerisque mi. Vivamus aliquam nisl libero, sit amet scelerisque ligula laoreet vel.</p>
-                <button>Read more</button>
-            </article>
-            <aside>
-                <figure>
-                    <img src="./image/img1.jpg" alt="Plantas destacando una con hojas con agujeros">
-                </figure>
-            </aside>
-            <article>
-                <h2>Ipsum lorem sed lorem</h2>
-                <p>3 days ago by <span>María G</span></p>
-                <p>Nullam posuere erat vel placerat rutrum. Praesent ac consectetur dui, et congue quam. Donec aliquam lacinia condimentum. Integer porta massa sapien, commodo sodales diam suspicit vitae. Aliquam quis felis sed urna semper semper. Phasellus eu scelerisque mi. Vivamus aliquam nisl libero, sit amet scelerisque ligula laoreet vel.</p>
-                <button>Read more</button>
-            </article>
-            <aside>
-                <figure>
-                    <img src="./image/img2.jpg" alt="Gotas de agua sobre un fondo desenfocado mostrando hojas">
-                </figure>
-            </aside>
-            <article>
-                <h2>Ipsum lorem sed lorem</h2>
-                <p>3 days ago by <span>María G</span></p>
-                <p>Nullam posuere erat vel placerat rutrum. Praesent ac consectetur dui, et congue quam. Donec aliquam lacinia condimentum. Integer porta massa sapien, commodo sodales diam suspicit vitae. Aliquam quis felis sed urna semper semper. Phasellus eu scelerisque mi. Vivamus aliquam nisl libero, sit amet scelerisque ligula laoreet vel.</p>
-                <button>Read more</button>
-            </article>
-            <aside>
-                <figure>
-                    <img src="./image/img3.jpg" alt="Gotas de agua sobre un fondo desenfocado mostrando árboles">
-                </figure>
-            </aside>
+        <section id="content">
+            <div class="flex flex-wrap">
+                <article class="flex flex-col">
+                    <h2><a href="#">Ipsum lorem sed lorem</a></h2>
+                    <p>3 days ago by <a href="#">María G</a></p>
+                    <p>Nullam posuere erat vel placerat rutrum. Praesent ac consectetur dui, et congue quam. Donec aliquam lacinia condimentum. Integer porta massa sapien, commodo sodales diam suspicit vitae. Aliquam quis felis sed urna semper semper. Phasellus eu scelerisque mi. Vivamus aliquam nisl libero, sit amet scelerisque ligula laoreet vel.</p>
+                    <a href="generic.html" class="read-more-btn">Read more</a>
+                </article>
+                <picture>
+                    <img src="image/img1.jpg" alt="Plantas destacando una con hojas con agujeros">
+                </picture>
+            </div>
+            <div class="flex flex-reverse flex-wrap">
+                <article class="flex flex-col bg-orange">
+                    <h2 class="text-white"><a href="#">Ipsum lorem sed lorem</a></h2>
+                    <p>3 days ago by <a href="" class="text-gray">María G</a></p>
+                    <p>Nullam posuere erat vel placerat rutrum. Praesent ac consectetur dui, et congue quam. Donec aliquam lacinia condimentum. Integer porta massa sapien, commodo sodales diam suspicit vitae. Aliquam quis felis sed urna semper semper. Phasellus eu scelerisque mi. Vivamus aliquam nisl libero, sit amet scelerisque ligula laoreet vel.</p>
+                    <a href="generic.html" class="read-more-btn">Read more</a>
+                </article>
+                <picture>
+                    <img src="image/img2.jpg" alt="Gotas de agua sobre un fondo desenfocado mostrando hojas">
+                </picture>
+            </div>
+            <div class="flex flex-wrap">
+                <article class="flex flex-col">
+                    <h2><a href="#">Ipsum lorem sed lorem</a></h2>
+                    <p>3 days ago by <a href="#">María G</a></p>
+                    <p>Nullam posuere erat vel placerat rutrum. Praesent ac consectetur dui, et congue quam. Donec aliquam lacinia condimentum. Integer porta massa sapien, commodo sodales diam suspicit vitae. Aliquam quis felis sed urna semper semper. Phasellus eu scelerisque mi. Vivamus aliquam nisl libero, sit amet scelerisque ligula laoreet vel.</p>
+                    <a href="generic.html" class="read-more-btn">Read more</a>
+                </article>
+                <picture>
+                    <img src="image/img3.jpg" alt="Gotas de agua sobre un fondo desenfocado mostrando árboles">
+                </picture>
+            </div>
         </section>
     </main>
-    <footer>
+    <footer class="flex flex-center">
         <p>Design: <a href="#">by Rojohn</a></p>
     </footer>
 </body>

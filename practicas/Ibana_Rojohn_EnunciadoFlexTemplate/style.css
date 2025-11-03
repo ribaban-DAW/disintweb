@@ -1,116 +1,204 @@
 :root {
     --white: #ffffff;
-    --white-shade: #ffffffcc;
+    --white-shade: #eeeeee;
+    --lightblack: #363636;
     --black: #1c1c1c;
     --brown: #deb992;
     --orange: #d48166;
-    --gray: #ffffff50;
-    --button-hover: #ffffff11;
+    --lightgray: #d8d8d8c4;
+    --gray: #bbbcbe;
+    --btn-hover: #ffffff29;
 
     --nav-vertical-padding: 1em;
-    --button-padding: 1em;
-    --fonts: Roboto, Arial, sans-serif;
+
+    --fonts: Roboto, Arial, sans-serif, system-ui;
 }
 
 * {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
     font-family: var(--fonts);
 }
 
-nav {
-    background: var(--black);
-    padding: var(--nav-vertical-padding);
-}
-
-nav > p {
-    color: var(--white);
-}
-
-nav > p > a {
-    color: var(--white);
+a {
     text-decoration: none;
+    color: inherit;
 }
 
-.hero {
-    background: var(--brown);
-    color: var(--white);
-    min-height: 60vh;
-    
+/* General */
+
+.flex {
     display: flex;
-    flex-direction: column;
+}
+
+.flex-center {
     align-items: center;
     justify-content: center;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+.flex-reverse {
+    flex-direction: row-reverse;
+}
+
+.text-white {
+    color: var(--white);
+}
+
+.text-gray {
+    color: var(--gray);
+}
+
+.text-orange {
+    color: var(--orange);
+}
+
+.bg-orange {
+    background: var(--orange);
+}
+
+/* Específico */
+
+.navbar {
+    background: var(--black);
+    padding: var(--nav-vertical-padding);
+    color: var(--white);
+    font-size: 1.5em;
+}
+
+#hero {
+    background: var(--brown);
+    color: var(--white);
+    min-height: 70vh;
+    
+    flex-direction: column;
     gap: 2em;
 
     font-size: 1.5em;
 }
 
-.hero > button {
-    background: transparent;
-
+#hero > a {
     color: var(--white);
     border: 1px solid var(--white);
-    padding: var(--button-padding) calc(var(--button-padding) * 3);
+    padding: 1em 2.5em;
     font-weight: bold;
+    transition: all 1s ease-out;
 }
 
-.hero > button:hover {
-    background: var(--button-hover);
+#hero > a:hover {
+    background: var(--btn-hover);
 }
 
-.content {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.content > article > div {
-    width: 50%;
-}
-
-.content > article > aside {
-    width: 50%;
-}
-
-
-
-.content > article {
-    display: flex;
-    flex-direction: column;
-    gap: 1em;
-}
-
-.content > article > h2 {
-    font-size: 2em;
+.read-more-btn {
     color: var(--orange);
+    padding: 0.7em 2em;
+    border: 1px solid var(--black);
+    font-weight: bold;
+    text-transform: capitalize;
+    transition: all 0.5s ease-out;
 }
 
-.content > article > h2+p {
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
-    padding: 1em;
+#content > div {
+    article,
+    picture {
+        width: 50%;
+        flex: 1 1 500px;
+    }
+
+    article {
+        gap: 1em;
+        padding: 8em 4em;
+        align-items: flex-end;
+        color: var(--lightblack);
+        text-align: end;
+
+        h2 {
+            font-size: 2.5em;
+            color: var(--orange);
+        }
+
+        h2+p {
+            border-top: 1px solid var(--gray);
+            border-bottom: 1px solid var(--gray);
+            padding: 1em 0;
+            width: 100%;
+            font-style: italic;
+            color: var(--gray);
+        }
+        
+        a {
+            color: var(--orange);
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        a.read-more-btn {
+            text-decoration: none;
+        }
+
+        a.read-more-btn:hover {
+            background: var(--white-shade);
+        }
+    }
 }
 
-.content > article > h2+p > span {
-    color: var(--orange);
+#content > div:nth-child(2) > article {
+    background: var(--orange);
+    align-items: flex-start;
+    color: var(--white-shade);
+    text-align: start;
+
+    h2,
+    a {
+        color: var(--white-shade);
+    }
+
+    h2+p {
+        color: var(--lightgray);
+        border-color: var(--white-shade);
+    }
+
+    .read-more-btn {
+        border-color: var(--lightgray);
+        color: var(--white);
+    }
+
+    .read-more-btn:hover {
+        background: var(--btn-hover);
+    }
 }
 
-.content > aside > figure > img {
+#content > div:nth-child(3) > article {
+    h2,
+    a {
+        color: var(--brown);
+    }
+}
+
+#content > div > picture > img {
     display: block;
+    object-fit: cover;
     width: 100%;
+    height: 100%;
 }
 
 footer {
     min-height: 30vh;
     background: var(--black);
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 footer > p {
-    color: var(--gray);
+    color: var(--lightgray);
 }
 
 footer > p > a {
@@ -119,4 +207,13 @@ footer > p > a {
 
 footer > p > a:hover {
     color: var(--white);
+    text-decoration: underline;
+}
+
+/* NOTA: Sin el media query creo que es imposible que el texto en dispositivos móviles se vea como en el ejemplo */
+@media screen and (max-width: 999px) {
+    #content > div > article {
+        align-items: start;
+        text-align: start;
+    }
 }
