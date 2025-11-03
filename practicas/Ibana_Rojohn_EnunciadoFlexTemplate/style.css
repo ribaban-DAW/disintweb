@@ -106,14 +106,14 @@ a {
     transition: all 0.5s ease-out;
 }
 
-#content > div {
-    article,
+#content > article {
+    div,
     picture {
         width: 50%;
         flex: 1 1 500px;
     }
 
-    article {
+    div {
         gap: 1em;
         padding: 8em 4em;
         align-items: flex-end;
@@ -152,7 +152,7 @@ a {
     }
 }
 
-#content > div:nth-child(2) > article {
+#content > article:nth-child(2) > div {
     background: var(--orange);
     align-items: flex-start;
     color: var(--white-shade);
@@ -178,14 +178,14 @@ a {
     }
 }
 
-#content > div:nth-child(3) > article {
+#content > article:nth-child(3) > div {
     h2,
     a {
         color: var(--brown);
     }
 }
 
-#content > div > picture > img {
+#content > article > picture > img {
     display: block;
     object-fit: cover;
     width: 100%;
@@ -215,7 +215,7 @@ footer > p > a:hover {
     #content > div {
         flex-wrap: wrap-reverse;
 
-        article {
+        div {
             align-items: start;
             text-align: start;
         }
