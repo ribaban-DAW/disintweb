@@ -212,7 +212,7 @@ footer > p > a:hover {
 
 /* NOTA: Sin el media query creo que es imposible que el texto en dispositivos móviles se vea como en el ejemplo */
 @media screen and (max-width: 999px) {
-    #content > div {
+    #content > article {
         flex-wrap: wrap-reverse;
 
         div {
