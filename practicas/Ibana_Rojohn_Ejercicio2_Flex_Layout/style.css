@@ -30,7 +30,6 @@ body {
 header {
     background: url("img_1000x600.jpg") #000000AA center var(--background_image_offset) / cover no-repeat;
     background-blend-mode: darken;
-    margin-top: calc(-1 * var(--background_image_offset));
     background-origin: padding-box;
     min-height: var(--header_min_height);
     
@@ -72,6 +71,7 @@ main {
     display: flex;
     flex-wrap: wrap;
     gap: 1em;
+    margin: 0 auto;
 
     padding: 4em 1em;
 

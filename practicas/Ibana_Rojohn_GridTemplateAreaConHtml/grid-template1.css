@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css?family=Merriweather:300,900|Six+Caps');
+
+:root {
+    --yellow: yellow;
+    --white: white;
+    --black: black;
+    --sidebar-color: #e8e8e8;
+
+    --font-family: 'Six Caps', sans-serif;
+    --font-family-body: 'Merriweather', sans-serif;
+    --line-height: 1.6px;
+    --letter-spacing: 0.3em;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: var(--font-family-body);
+}
+
+header, .hero, footer {
+    font-family: var(--font-family);
+    text-transform: uppercase;
+}
+
+header, footer {
+    background: black;
+
+    display: flex;
+    justify-content: center;
+    padding: 6em 0;
+}
+
+.header-title, .footer-title {
+    font-size: 4em;
+    color: var(--yellow);
+}
+
+.hero {
+    z-index: 100;
+    background: url("fondo7.jpg") top / cover no-repeat;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 60vh;
+}
+
+.hero-title {
+    font-size: 10em;
+}
+
+.hero-subtitle {
+    font-size: 2em;
+    font-family: var(--font-family-body);
+}
+
+.card-title {
+    font-weight: normal;
+}
