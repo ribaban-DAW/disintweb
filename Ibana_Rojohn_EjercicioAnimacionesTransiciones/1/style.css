@@ -1,0 +1,141 @@
+:root {
+    --background-color: #2a3c51;
+    --title-color: #f5c700;
+    --button-default-color: #ffffff;
+
+    --title-font-size: 5rem;
+    --button-font-size: 1.3rem;
+
+    --button-vertical-padding: 30px;
+    --button-horizontal-padding: calc(var(--button-vertical-padding) * 2);
+
+    --button-border-size: 4px;
+    --button-border-radius-sm: 20px;
+    --button-border-radius-md: calc(var(--button-border-radius-sm) * 3);
+
+    --button-first-color: #d13644;
+    --button-first-color--hover: #f72d32;
+    --button-second-color-primary: #02917f;
+    --button-second-color-second: #02c49a;
+    --button-second-strip-offset: 12px;
+    --button-third-color: #1d96e0;
+    --button-fourth-color: #ffe21b;
+    --button-fourth-color--hover: #f4c700;
+    --button-fifth-color: #94269d;
+    --button-fifth-color--hover: #9a20b2;
+
+    --transition-duration: 0.3s;
+}
+
+body {
+    background: var(--background-color);
+    margin: 0;
+    font-family: system-ui, Arial, Helvetica, sans-serif;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.main__title {
+    color: var(--title-color);
+    text-align: center;
+    font-size: var(--title-font-size);
+}
+
+.main__buttons {
+    display: flex;
+    gap: 3rem;
+}
+
+.buttons__btn {
+    padding: var(--button-vertical-padding) var(--button-horizontal-padding);
+    font-size: var(--button-font-size);
+    color: var(--button-default-color);
+    border-radius: var(--button-border-radius-sm);
+    font-weight: bold;
+}
+
+.buttons__btn:hover {
+    cursor: pointer;
+}
+
+/* first (Sombra interna expansiva): Usa la propiedad box-shadow con una transición para crear un efecto
+de expansión hacia dentro cuando se pase el cursor.*/
+.buttons__btn--first {
+    background: transparent;
+    border: var(--button-border-size) solid var(--button-first-color);
+    transition: ease-in-out var(--transition-duration);
+    color: var(--button-first-color);
+}
+
+.buttons__btn--first:hover {
+    /* Creo que esto es más o menos lo mismo, no se aprecia mucho la diferencia para duraciones cortas */
+    /* background: var(--button-first-color--hover); */
+    box-shadow: inset 0 0 100px 100px var(--button-first-color--hover);
+    border-color: var(--button-first-color--hover);
+    color: var(--button-default-color);
+}
+
+/* second (Cambio de fondo con gradiente animado): Modifica background-position con una transición para crear
+un efecto de desplazamiento en el fondo degradado cuando se active el hover. */
+.buttons__btn--second {
+    border-radius: var(--button-border-radius-md);
+    background: repeating-linear-gradient(90deg,
+            var(--button-second-color-primary),
+            var(--button-second-color-primary) var(--button-second-strip-offset),
+            var(--button-second-color-second) var(--button-second-strip-offset),
+            var(--button-second-color-second) calc(var(--button-second-strip-offset) * 2));
+    border: var(--button-border-size) solid var(--button-second-color-second);
+    transition: ease-in-out var(--transition-duration);
+}
+
+.buttons__btn--second:hover {
+    background-position: 20px 0;
+}
+
+/* third (Sombra dinámica en hover): Juega con la propiedad box-shadow para reducir el brillo interno y agregar
+un contorno luminoso al pasar el cursor. */
+.buttons__btn--third {
+    background: var(--button-third-color);
+    border: var(--button-border-size) solid var(--button-third-color);
+    transition: ease-in-out var(--transition-duration);
+}
+
+.buttons__btn--third:hover {
+    background: transparent;
+    box-shadow: inset 0 0 10px 1px var(--button-third-color), 0 0 20px var(--button-third-color);
+}
+
+/* fourth (Deslizamiento de color en diagonal): Usa background-position y un fondo degradado para generar un cambio
+de color desde un ángulo de 45°, aplicando una transición suave. */
+.buttons__btn--fourth {
+    background: linear-gradient(45deg, var(--button-fourth-color--hover) 50%, transparent 50%);
+    background-size: 250% 100%;
+    background-position: right bottom;
+    border: var(--button-border-size) solid var(--button-fourth-color);
+    transition: ease-in-out var(--transition-duration);
+}
+
+.buttons__btn--fourth:hover {
+    background-position: top left;
+    border: var(--button-border-size) solid var(--button-fourth-color--hover);
+}
+
+/* fifth (Relleno de color desde el centro): Aplica una pseudo-clase ::after para crear un efecto de expansión de fondo
+desde el centro al pasar el cursor, usando width con una transición. */
+.buttons__btn--fifth {
+    background: transparent;
+    border: var(--button-border-size) solid var(--button-fifth-color);
+    color: var(--button-fifth-color);
+}
+
+/* sixth (Cambio de color con deslizamiento vertical): Modifica background-position en un fondo degradado para que la segunda 
+mitad del color se desplace hacia arriba al hacer hover, combinándolo con un cambio de color del texto. */
+.buttons__btn--sixth {
+    border-radius: var(--button-border-radius-md);
+}
