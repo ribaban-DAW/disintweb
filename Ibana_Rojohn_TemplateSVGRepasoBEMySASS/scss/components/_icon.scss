@@ -1,0 +1,14 @@
+@mixin icon-container($size, $background: var(--purple)) {
+    width: $size;
+    height: $size;
+    background: $background;
+    border-radius: 100%;
+    display: flex;
+}
+
+@mixin icon($size, $fill: var(--white)) {
+    width: $size;
+    height: $size;
+    margin: auto;
+    fill: $fill;
+}

@@ -1,0 +1,53 @@
+@use '../components/icon' as icon;
+@use '../abstracts/mixins' as mixins;
+
+.header {
+    @include mixins.center(flex);
+    gap: var(--size-xl);
+    margin-top: var(--size-10xl);
+    margin-bottom: var(--size-4xl);
+
+    &__icon-container {
+        @include icon.icon-container(var(--size-4xl));
+        margin-bottom: 2em;
+    }
+
+    &__icon {
+        @include icon.icon(var(--size-3xl));
+    }
+
+    &__title {
+        @include mixins.title(var(--purple));
+    }
+
+    &__subtitle {
+        @include mixins.subtitle(var(--gray), var(--size-md));
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        margin-bottom: var(--size-2xl);
+    }
+}
+
+.nav {
+    &__links {
+        list-style: none;
+        display: flex;
+        gap: var(--size-xl);
+    }
+
+    &__link-container {
+        text-transform: uppercase;
+    }
+
+    &__link {
+        text-decoration: none;
+        color: var(--gray);
+        font-weight: bold;
+        letter-spacing: 2px;
+
+        &--active {
+            border: 1px solid var(--black);
+            padding: var(--size-sm) var(--size-lg);
+        }
+    }
+}

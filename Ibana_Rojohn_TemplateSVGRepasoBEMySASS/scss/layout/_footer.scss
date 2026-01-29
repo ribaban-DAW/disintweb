@@ -1,0 +1,30 @@
+@use '../abstracts/mixins' as mixins;
+
+.footer {
+    background: var(--black);
+    @include mixins.center(flex);
+    min-height: 15dvh;
+
+    &__separator {
+        border: none;
+        border-top: 1px solid var(--gray);
+        margin: 0 var(--size-4xl);
+        align-self: stretch;
+        flex: 1;
+    }
+}
+
+.copyright {
+    flex: 1;
+    color: var(--gray);
+    text-align: center;
+    padding: var(--size-lg) 0;
+
+    &__photo {
+        color: var(--light-gray);
+    }
+
+    &__design {
+        color: var(--light-gray);
+    }
+}

@@ -1,0 +1,29 @@
+@mixin center($display) {
+    display: $display;
+    justify-content: center;
+    align-items: center;
+
+    @if $display ==flex {
+        flex-direction: column;
+    }
+}
+
+@mixin title($color, $font-size: var(--size-3xl)) {
+    color: $color;
+    font-size: $font-size;
+    text-align: center;
+}
+
+@mixin subtitle($color, $font-size: var(--size-lg)) {
+    color: $color;
+    font-size: $font-size;
+    text-align: center;
+    font-weight: normal;
+}
+
+@mixin description($color, $font-size: var(--size-md)) {
+    color: $color;
+    font-size: $font-size;
+    text-align: center;
+    line-height: 2;
+}

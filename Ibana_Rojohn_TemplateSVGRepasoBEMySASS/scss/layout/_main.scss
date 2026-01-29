@@ -1,0 +1,103 @@
+@use '../abstracts/mixins' as mixins;
+@use '../components/icon' as icon;
+
+.intro {
+    @include mixins.center(flex);
+    background: var(--purple);
+    padding: var(--size-10xl) 0;
+    gap: var(--size-4xl);
+
+    &__title {
+        @include mixins.title(var(--white), var(--size-2xl));
+    }
+
+    &__description {
+        @include mixins.description(var(--white-transparent));
+        max-width: 1250px;
+    }
+}
+
+.tools {
+    @include mixins.center(flex);
+    background: var(--gray-light);
+    padding: var(--size-4xl) 0;
+
+    &__title {
+        @include mixins.title(var(--black), var(--size-2xl));
+    }
+
+    &__subtitle {
+        @include mixins.subtitle(var(--gray));
+        text-transform: capitalize;
+        margin-bottom: var(--size-4xl);
+        max-width: 1650px;
+    }
+}
+
+.tool {
+    display: flex;
+    gap: var(--size-xl);
+
+    &__card {
+        @include mixins.center(flex);
+        gap: var(--size-md);
+    }
+
+    &__container {
+        @include icon.icon-container(var(--size-3xl), transparent);
+        margin-bottom: 1em;
+    }
+
+    &__icon {
+        @include icon.icon(var(--size-xl), var(--black));
+    }
+
+    &__title {
+        @include mixins.title(var(--black), var(--size-md));
+        text-transform: uppercase;
+    }
+
+    &__description {
+        @include mixins.description(var(--gray));
+        max-width: 400px;
+        margin-bottom: 2em;
+    }
+
+    &__button {
+        text-decoration: none;
+        color: var(--white);
+        background: var(--purple);
+        padding: var(--size-md) var(--size-md);
+        font-weight: bold;
+        font-size: var(--size-md);
+    }
+}
+
+.socials {
+    @include mixins.center(flex);
+    background: var(--black);
+    padding: var(--size-4xl) 0;
+
+    &__title {
+        @include mixins.title(var(--white), var(--size-2xl));
+    }
+
+    &__subtitle {
+        @include mixins.subtitle(var(--gray));
+        text-transform: capitalize;
+        margin-bottom: var(--size-2xl);
+    }
+}
+
+.social {
+    display: flex;
+    gap: var(--size-md);
+
+    &__container {
+        @include icon.icon-container(var(--size-3xl));
+    }
+
+    &__icon {
+        @include icon.icon(var(--size-lg));
+    }
+}
